@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="FileSync.vcxproj" Id="4324acc8-de61-4053-a8c0-fc587a4f5edc" />
+</Solution>

@@ -1,0 +1,44 @@
+#include <windows.h>
+#include <winres.h>
+
+// 1. 设置语言（解决 RC2144）
+// 0x04, 0x02 分别对应 LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+
+// 2. 定义图标（解决 RC2135）
+// ID 101 建议使用简单的路径，或者将 ico 放在项目目录下使用相对路径
+101   ICON   "file_type_fusebox_icon_130589.ico"
+
+// 3. (可选) 版本信息，让服务在属性里看起来更专业
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION 1, 0, 0, 1
+PRODUCTVERSION 1, 0, 0, 1
+FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+FILEFLAGS 0x1L
+#else
+FILEFLAGS 0x0L
+#endif
+FILEOS 0x40004L
+FILETYPE 0x1L
+FILESUBTYPE 0x0L
+BEGIN
+BLOCK "StringFileInfo"
+BEGIN
+BLOCK "080404b0"
+BEGIN
+VALUE "CompanyName", "XYFileSync"
+VALUE "FileDescription", "XYFileSync 同步服务"
+VALUE "FileVersion", "1.0.0.1"
+VALUE "InternalName", "FileSync.exe"
+VALUE "LegalCopyright", "Copyright (C) 2025"
+VALUE "OriginalFilename", "FileSync.exe"
+VALUE "ProductName", "XYFileSync"
+VALUE "ProductVersion", "1.0.0.1"
+END
+END
+BLOCK "VarFileInfo"
+BEGIN
+VALUE "Translation", 0x804, 1200
+END
+END
